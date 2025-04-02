@@ -309,10 +309,11 @@ const Home = () => {
         </div>
       </div>
       <div
-        className="relative flex flex-1 inset-0 bg-cover bg-center bg-no-repeat"
+        className="relative flex flex-1 inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{
           backgroundImage:
-            "url('http://kalsarppoojainujjain.com/assets/images/Service/Services/kalsarp-1.jpg')",
+            "url('http://kalsarppoojainujjain.com/assets/images/Background/ujjain-background.jpg')",
+          
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
