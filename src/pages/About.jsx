@@ -38,7 +38,9 @@ const About = () => {
             "url('http://kalsarppoojainujjain.com/assets/images/PageTitle/Banner-trimbak.jpg')",
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-60"></div>
+        <div className="absolute inset-0 bg-black opacity-60">
+          
+        </div>
 
         {/* Content */}
         <div className="relative  text-start   mx-auto px-4 sm:px-6 lg:px-8">

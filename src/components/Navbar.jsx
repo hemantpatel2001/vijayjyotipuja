@@ -11,7 +11,7 @@ const Navbar = () => {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About Guruji", href: "/about" },
-    { name: "Kalsarp Puja", href: "/services" },
+    { name: "Kalsarp Puja", href: "/Kalsharppuja" },
     {
       name: "Other Puja",
       dropdown: [
@@ -26,13 +26,14 @@ const Navbar = () => {
   return (
     <>
       <TopContactDetails />
+ 
       <nav className="shadow-lg flex  justify-between items-center">
         <div className="ml-16 p-2">
                {/* Logo  */}
                <Link to="/" className="text-2xl font-bold">
               <img
                 className="h-14"
-                src="http://kalsarppoojainujjain.com/assets/images/Logo/logo-ankit-guruji.png"
+              src="public/logo.png"
                 alt="Logo"
               />
             </Link>

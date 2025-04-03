@@ -156,13 +156,13 @@ const Home = () => {
         {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-900"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 border-white border   bg-transparent  text-white px-4 py-2 rounded-full hover:bg-[#730000]"
         >
           ❮
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-900"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 hover:bg-[#730000] border-white border   bg-transparent text-white px-4 py-2 rounded-full"
         >
           ❯
         </button>
@@ -313,7 +313,6 @@ const Home = () => {
         style={{
           backgroundImage:
             "url('http://kalsarppoojainujjain.com/assets/images/Background/ujjain-background.jpg')",
-          
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -485,49 +484,23 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* ujian pooja */}
-      <div>
-        <span className="text-[#FF5003] text-xl font-semibold">
-          UJAIN POOJA
-        </span>
-        <h3 className="text-[#730000] text-5xl font-semibold">
-          All Puja Performed ByPandit Gajanan Guruji
-        </h3>
-      </div>
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
-        {ujjianPooja.map((pooja, index) => (
-          <div
-            key={index}
-            className="relative bg-white shadow-lg rounded-2xl overflow-hidden"
-          >
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-white bg-opacity-80 p-2">
-              <h2 className="text-xl font-semibold text-center">
-                {pooja.heading}
-              </h2>
-              <p className="text-gray-600 text-center">{pooja.title}</p>
-            </div>
-            <img
-              src={pooja.image}
-              alt={pooja.heading}
-              className="w-full h-40 object-cover"
-            />
-          </div>
-        ))}
-      </div> */}
+    
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
         {ujjianPooja.map((pooja, index) => (
-          <div>
-            <div
-              key={index}
-              className="relative bg-white shadow-lg rounded-2xl overflow-hidden"
-            >
+          <div key={index} className="w-full relative h-full">
+            {/* Image Container */}
+            <div className="bg-white rounded-t-2xl overflow-hidden">
               <img
                 src={pooja.image}
                 alt={pooja.heading}
-                className="w-full h-58 object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
-            <div className=" absolute bg-white border shadow-lg rounded-lg h-24  ">
+
+            <div className="relative bg-white border shadow-lg h-24 w-full  group overflow-hidden mt-[-20px]">
+            
+              <div className="absolute bottom-0 top-0 left-[-50px] w-0 h-0 border-t-[40px] border-b-[40px] border-r-[40px] border-l-[40px] border-transparent border-t-white group-hover:bg-opacity-50 group-hover:border-t-gray-300 transition-all duration-300 "></div>
+
               <h2 className="text-xl font-semibold text-center">
                 {pooja.heading}
               </h2>
@@ -535,7 +508,9 @@ const Home = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> 
+
+
     </div>
   );
 };

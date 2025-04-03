@@ -4,9 +4,10 @@ import { store } from './store/store';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
-import Services from './pages/Services';
+
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import Kalsharppuja from './pages/Kalsarppuja';
 // import Gallery from './components/Gallery';
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
+              <Route path="/Kalsharppuja" element={<Kalsharppuja />} />
               <Route path="/contact" element={<Contact />} />
               {/* <Route path="/gallery" element={<Gallery />} /> */}
             </Routes>
