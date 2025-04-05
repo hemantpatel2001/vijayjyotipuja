@@ -168,35 +168,6 @@ const Home = () => {
         </button>
       </div>
 
-      {/* Services Section */}
-      {/* <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Our Services
-            </h2>
-            <p className="mt-4 text-lg text-gray-500">
-              Choose from our wide range of puja services
-            </p>
-          </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {["Ganesh Puja", "Lakshmi Puja", "Durga Puja"].map((service) => (
-              <div
-                key={service}
-                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-              >
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {service}
-                </h3>
-                <p className="mt-2 text-gray-500">
-                  Experience divine blessings through our sacred{" "}
-                  {service.toLowerCase()}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
 
       <div className="mt-2 flex  ">
         <div className="w-[617px] h-[338px] relative">

@@ -83,7 +83,7 @@ const About = () => {
           />
           <div className="absolute inset-0 flex bg-[#730000]  h-24 w-80">
             <p className="text-white text-7xl font-bold items-center p-3">
-              30+
+              10+
             </p>
             <span className="text-3xl mt-auto mb-auto font-semibold text-white">
               Years of <br />
@@ -124,7 +124,7 @@ const About = () => {
           UJAIN POOJA
         </span>
         <h3 className="text-[#730000] text-4xl font-semibold">
-          All Puja Performed ByPandit Gajanan Guruji
+          All Puja Performed By Pandit Vipra Jyoti
         </h3>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">

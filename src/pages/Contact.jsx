@@ -1,40 +1,66 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Link } from "react-router-dom";
+import * as Yup from "yup";
 
 const validationSchema = Yup.object({
   name: Yup.string()
-    .required('Name is required')
-    .min(2, 'Name must be at least 2 characters'),
+    .required("Name is required")
+    .min(2, "Name must be at least 2 characters"),
   email: Yup.string()
-    .email('Invalid email address')
-    .required('Email is required'),
+    .email("Invalid email address")
+    .required("Email is required"),
   phone: Yup.string()
-    .matches(/^[0-9]{10}$/, 'Phone number must be 10 digits')
-    .required('Phone number is required'),
-  subject: Yup.string().required('Subject is required'),
-  message: Yup.string().required('Message is required'),
+    .matches(/^[0-9]{10}$/, "Phone number must be 10 digits")
+    .required("Phone number is required"),
+  subject: Yup.string().required("Subject is required"),
+  message: Yup.string().required("Message is required"),
 });
 
 const Contact = () => {
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
     // Here you would typically make an API call to submit the form
-    console.log('Form submitted:', values);
+    console.log("Form submitted:", values);
     setSubmitting(false);
     resetForm();
   };
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="relative bg-primary text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-              Contact Us
-            </h1>
-            <p className="mt-3 max-w-md mx-auto text-base sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              Get in touch with us for any questions or inquiries
-            </p>
+      <div
+        className="relative py-12 sm:py-16 md:py-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('http://kalsarppoojainujjain.com/assets/images/PageTitle/Banner-trimbak.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+
+        {/* Content */}
+        <div className="relative text-start mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl text-white font-bold">
+            Contact
+            <br /> Ujjian
+          </h1>
+          <div className="flex place-items-start gap-x-3 mt-3">
+            <span className="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+              >
+                <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+              </svg>
+            </span>
+            <span className="flex items-center">
+              <Link
+                to="/"
+                className="text-base sm:text-lg font-semibold no-underline hover:primary-col text-white"
+              >
+                Home
+              </Link>
+            </span>
           </div>
         </div>
       </div>
@@ -86,11 +112,11 @@ const Contact = () => {
             </h2>
             <Formik
               initialValues={{
-                name: '',
-                email: '',
-                phone: '',
-                subject: '',
-                message: '',
+                name: "",
+                email: "",
+                phone: "",
+                subject: "",
+                message: "",
               }}
               validationSchema={validationSchema}
               onSubmit={handleSubmit}
@@ -108,7 +134,7 @@ const Contact = () => {
                       type="text"
                       name="name"
                       id="name"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                      className="mt-1 block w-full rounded-md  border-2 border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
                     />
                     <ErrorMessage
                       name="name"
@@ -120,7 +146,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-sm font-medium  text-gray-700"
                     >
                       Email
                     </label>
@@ -128,7 +154,7 @@ const Contact = () => {
                       type="email"
                       name="email"
                       id="email"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                      className="mt-1 block w-full rounded-md border-2 border-gray-300  shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
                     />
                     <ErrorMessage
                       name="email"
@@ -148,7 +174,7 @@ const Contact = () => {
                       type="tel"
                       name="phone"
                       id="phone"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                      className="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
                     />
                     <ErrorMessage
                       name="phone"
@@ -168,7 +194,7 @@ const Contact = () => {
                       type="text"
                       name="subject"
                       id="subject"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                      className="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
                     />
                     <ErrorMessage
                       name="subject"
@@ -180,7 +206,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-sm font-medium  text-gray-700"
                     >
                       Message
                     </label>
@@ -189,7 +215,7 @@ const Contact = () => {
                       name="message"
                       id="message"
                       rows={4}
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                      className="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
                     />
                     <ErrorMessage
                       name="message"
@@ -199,13 +225,14 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <button
+                  <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                      className="py-2 px-4 border text-lg rounded-md  text-white mb-2 primary-col focus:outline-none focus:ring-2  w-full focus:ring-offset-2 focus:ring-primary"
                     >
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                      {isSubmitting ? "Submitting..." : "Submit"}
                     </button>
+               
                   </div>
                 </Form>
               )}
@@ -217,4 +244,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
